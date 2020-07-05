@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- Maps -->
+    <!-- Leaflet CSS & JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+    crossorigin=""></script>
+
+
+
+    <title>2006 NFL Draft Prospects</title>
+    <!-- FAVICON LINK -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.min.css">
+
+    <!-- FONT AWESOME LINK -->
+    <link rel="stylesheet" type="text/css" href="css/vendor/font-awesome/css/font-awesome.min.css">
+
+    <!-- IMAGE OVERLAY STYLE LINK  -->
+    <link rel="stylesheet" type="text/css" href="css/vendor/overlay/style.css">
+    <!-- LIGHTBOX STYLE LINK -->
+    <link rel="stylesheet" type="text/css" href="css/vendor/lightbox/ekko-style.css">
+
+    <!-- CAROUSEL STYLE LINK  -->
+    <link rel="stylesheet" type="text/css" href="css/vendor/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="css/vendor/owl-carousel/owl.theme.css">
+    <link rel="stylesheet" type="text/css" href="css/vendor/owl-carousel/carousel.css">
+
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" type="text/css" href="css/custom/style_red.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      [endif]-->
+</head>
+
+<body data-spy="scroll" data-target=".navbar-fixed-top" data-offset="75">
+   
+    <!--================================= NAVIGATION START =============================================-->
+    <nav class="navbar id="top-nav">
+        <div class="container" align="right">
+                <div>
+                    <br>
+                    <img src="images/tdt_logo.png" align="left">
+                    <a class="btn btn-default" href="#position-stats" role="button">By Position</a>
+                    <a class="btn btn-default" href="#draft-round" role="button">By Round</a>
+                    <a class="btn btn-default" href="#geodata" role="button">GeoData</a>
+                    <a class="btn btn-default" href="cleaned/tables/football.html" role="button">Vis 4</a>
+                    <a class="btn btn-default" href="#contact" role="button">Contact</a>
+
+                </div>
+                <br>
+
+        </div>
+    </nav>
+    <!--================================= NAVIGATION END =============================================-->
+
+     <!--================================= HEADER-FORM-WITH-IMAGE-1 START =============================================-->
+    <div class="container-fluid header-form-image-bgimage-1 bgimage-property parallax  header-space-image-form" id="home">
+        <div class="container">
+            <div class="col-md-10 column-center no-padding white-text res-width-full">
+                <div class="row">
+                    <div class="col-md-6 col-md-push-6 res-header-heading-bottom">
+                        <div class="contact-div header-contact-form header-contact-bg">
+                            <form class="contact-form" method="POST">
+                                <div class="clearfix">
+                                    <div class="header-form-heading-bg">
+                                        <h4 class="center">Introduction</h4>
+                                    </div>
+                                    <div class="header-contact-bg-pad">
+                                        <p class="left header-form-text ls">
+                                           
+                                            The 2006 NFL Draft Class is undoubtedly one of the best ever.  Player performance across the board demonstrates an excellent draft class at almost every position group.  
+                                            No. 1 pick, Mario Williams, makes a redeeming career after underperforming his rookie season.  Williams records 14 sacs to reach #3 in overall rankings. 
+                                            Other noticeable key players for their respective teams are Brandon Marshall, Jay Cutler, Reggie Bush, Joseph Addai, Maurice Jones-Drew or AJ Hawk.
+                                            Even late round picks and free agents such as Marques Colston, coming from a I-AA college like Hofstra, the 252nd of 255 picks has reached the starting 
+                                            WR spot in the New Orleans Saints. In his two seasons, he has caught for more than 2,200 yards and 19 TDs.
+                                        </p>
+                                        
+                                
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6 col-md-pull-6">
+                        <div class="center">
+                            <img src="" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--================================= BEGIN DASHBOARD =============================================-->
+    <!--Position Stats-->
+
+    <section class="container-fluid section-space section-bg-1">
+        <div class="container" id="position-stats">
+            <h1 class="left">Position Stats</h1>
+            
+             <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="qb-tab" data-toggle="tab" href="#qb" role="tab" aria-controls="qb" aria-selected="true">Quarterbacks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="receivers-tab" data-toggle="tab" href="#wr" role="tab" aria-controls="wr" aria-selected="false">Receivers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="db-tab" data-toggle="tab" href="#db" role="tab" aria-controls="db" aria-selected="false">Corners & Defensive Backs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="rb-tab" data-toggle="tab" href="#rb" role="tab" aria-controls="runningbacks" aria-selected="false">Running Backs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="lb-tab" data-toggle="tab" href="#lb" role="tab" aria-controls="Linebackers" aria-selected="false">Linebackers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="linemen-tab" data-toggle="tab" href="#linemen" role="tab" aria-controls="linemen" aria-selected="false">Linemen</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="specialists-tab" data-toggle="tab" href="#specialists" role="tab" aria-controls="specialists" aria-selected="false">Specialists</a>
+                </li>
+            </ul>
+            
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane active" id="qb" role="tabpanel" aria-labelledby="qb-tab">
+                    <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="100%" height="480" src="https://charts.mongodb.com/charts-project-0-hbqwg/embed/charts?id=ea0ab1a6-0525-420b-b525-018e39804b51&theme=light"></iframe>
+                </div>
+                <div class="tab-pane" id="wr" role="tabpanel" aria-labelledby="wr-tab">...</div>
+                <div class="tab-pane" id="db" role="tabpanel" aria-labelledby="db-tab">
+                    <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="100%" height="480" src="https://charts.mongodb.com/charts-project-0-hbqwg/embed/charts?id=ccfa54e0-d2b2-4aa7-bf2a-c4edba1a1c61&theme=light"></iframe>
+                </div>
+                <div class="tab-pane" id="rb" role="tabpanel" aria-labelledby="settings-tab">...</div>
+                <div class="tab-pane" id="lb" role="tabpanel" aria-labelledby="settings-tab">...</div>
+                <div class="tab-pane" id="linemen" role="tabpanel" aria-labelledby="settings-tab">...</div>
+                <div class="tab-pane" id="specialists" role="tabpanel" aria-labelledby="settings-tab">...</div>
+            </div>
+        </div>
+    </div>
+    
+    <!--================================= OUR ENVIRONMENT START =============================================-->
+    <section class="container-fluid section-space section-bg-2">
+        <div class="container">
+            <h1 class="center">The Performance Environment</h1>
+            <div class="row">
+                <div class="col-md-4 col-sm-4 common-res-bottom-1">
+                    <div class="left image-bottom">
+                        <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="100%" height="350" src="https://charts.mongodb.com/charts-project-0-hbqwg/embed/charts?id=ea0ab1a6-0525-420b-b525-018e39804b51&theme=light"></iframe>
+                
+                    </div>
+                    <h3 class="left h3-bottom"><a href="#">Organizational Level Analytics</a></h3>
+                    <p class="left"> We'll use data to inform and improve your organization's strategy for 
+                        scouting, program recruitment, player retention &  organizational culture
+                         </p>
+                </div>
+
+                <div class="col-md-4 col-sm-4 common-res-bottom-1">
+                    <div class="left image-bottom">
+                        <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="100%" height="350" src="https://charts.mongodb.com/charts-project-0-hbqwg/embed/charts?id=ea0ab1a6-0525-420b-b525-018e39804b51&theme=light"></iframe>
+                
+                    </div>
+                    <h3 class="left h3-bottom"><a href="#">Player Analytics </a></h3>
+                    <p class="left">Gain insights to improve general fitness, improve player motor response under fatigue, track and integrate 
+                        Bio-Psycho-Social Load and help coaches create strategies to track decision making for improved
+                        tactical performance.</p>
+                </div>
+
+                <div class="col-md-4 col-sm-4">
+                    <div class="left image-bottom">
+                        <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="100%" height="350" src="https://charts.mongodb.com/charts-project-0-hbqwg/embed/charts?id=ea0ab1a6-0525-420b-b525-018e39804b51&theme=light"></iframe>
+                    </div>
+                    <h3 class="left h3-bottom"><a href="#">Limitations & QC</a></h3>
+                    <p class="left">As with any infastructure, there may be predictible limitiations within an organization's system. 
+                        We also work with your staff to identify and improve both coach and player strategies that help mitigate coach-player cultural barrier to 
+                    communication, social faciliation, and performance outcomes. </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--================================= OUR ENVIRONMENT END =============================================-->
+
+
+    
+    <!--States Where Players Were Born Map-->
+    <section class="container-fluid section-space section-bg-2" style="margin-bottom: 60px;">
+        <div class="container" id="geodata">
+            <h1 class="left">Geographical Info</h1>
+             <!-- The div where we will inject our map -->
+            <iframe src="map.html" width="100%" height="480px">
+            
+            </iframe>
+            <div id="map"></div>
+             <!-- API key -->
+            <script type="text/javascript" src="config.js"></script>
+            <!-- Our JS -->
+            <script type="text/javascript" src="logic.js"></script>
+            
+         </div>
+    </div>
+
+
+ 
+    <!-- ================================= FOOTER-MAP START =============================================-->
+    <section class="container-fluid section-space section-bg-2" id="contact">
+        <div class="container">
+            <div class="row">
+            <div class="footer-br footer-br-bottom"></div>
+            <p class="center ls">&copy; 2020, The Dream Team</p>
+        </div>
+    </section>
+    <!--================================= FOOTER-MAP END =============================================-->
+
+
+    <!-- JQUERY LIBRARY -->
+    <script type="text/javascript" src="js/vendor/jquery.min.js"></script>
+    <!-- BOOTSTRAP -->
+    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+
+    <!-- SUBSCRIBE MAILCHIMP -->
+    <script type="text/javascript" src="js/vendor/subscribe/subscribe_validate.js"></script>
+
+    <!-- VALIDATION  -->
+    <script type="text/javascript" src="js/vendor/validate/jquery.validate.min.js"></script>
+
+
+    <!-- SLIDER JS FILES -->
+    <script type="text/javascript" src="js/vendor/slider/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="js/vendor/slider/carousel.js"></script>
+
+    <!-- SUBSCRIBE MAILCHIMP -->
+    <script type="text/javascript" src="js/vendor/subscribe/subscribe_validate.js"></script>
+
+    <!-- IMAGE OVERLAY JS FILE -->
+    <script type="text/javascript" src="js/vendor/img-overlay/modernizr.js"></script>
+    <script type="text/javascript" src="js/vendor/img-overlay/overlay.js"></script>
+    <!-- LIGHT BOX GALLERY -->
+    <script type="text/javascript" src="js/vendor/lightbox/ekko-lightbox.js"></script>
+    <script type="text/javascript" src="js/vendor/lightbox/lightbox.js"></script>
+
+    <!-- VIDEO -->
+    <script type="text/javascript" src="js/vendor/video/video.js"></script>
+
+    <!-- COUNTER JS FILES -->
+    <script type="text/javascript" src="js/vendor/counter/counter-lib.js"></script>
+    <script type="text/javascript" src="js/vendor/counter/jquery.counterup.min.js"></script>
+
+    <!-- PHONE_NUMBER VALIDATION JS -->
+    <script type="text/javascript" src="js/vendor/phone_number/phone_number.js"></script>
+
+
+    <!-- THEME JS -->
+    <script type="text/javascript" src="js/custom/custom.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="app.js"></script>
+    <!-- API key -->
+    <script type="text/javascript" src="config.js"></script>
+    <!-- Our JS -->
+    <script type="text/javascript" src="logic.js"></script>
+</body>
+
+
+</html>
